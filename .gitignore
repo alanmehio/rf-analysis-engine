@@ -1,0 +1,33 @@
+.idea/
+.vscode/
+
+*.egg-info/
+*.pyc
+*\.bak
+\.fuse*
+.coverage
+.DS_Store
+*__pycache__
+
+docs/_build/
+dist/
+build/
+htmlcov/
+
+.tox/
+
+dependency-graphs/
+test-results/
+uml-diagrams/
+pydoer-graphs/
+
+# LOGS
+*.log
+# LOCK files
+*.lock
+# VSC local env
+.venv/
+# pin-deps generated file 
+reqs.txt
+# auto-generated Sphinx api docs
+.docs
