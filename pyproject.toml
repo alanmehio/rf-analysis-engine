@@ -14,9 +14,9 @@ maintainers = [{name="Alan"}] # must be an object
 license = "AGPL-3.0-only"
 readme = "README.rst"
 
-homepage = "https://github.com/Issamricin/rf-power-analyzer"
-repository = "https://github.com/Issamricin/rf-power-analyzer"
-documentation = "https://rf-power-analyzer.readthedocs.io/"
+homepage = "https://github.com/alanmehio/rf-analysis-engine"
+repository = "https://github.com/alanmehio/rf-analysis-engine"
+documentation = "https://rf-analysis-engine.readthedocs.io/"
 
 keywords = [
     "RF", "RF surveillance", "Radio Frequency Surveillance", 
@@ -45,22 +45,19 @@ classifiers = [
 
 
 # PyPi url links, that appear in 'Project Links' section
-urls."Bug Tracker" = "https://github.com/Issamricin/rf-power-analyzer/issues"
-urls."CI: Github Actions" = "https://github.com/Issamricin/rf-power-analyzer/actions"
-urls.Documentation = "https://rf-power-analyzer.readthedocs.io/"
-urls."Source Code" = "https://github.com/Issamricin/rf-power-analyzer"
-urls.Changelog = "https://github.com/Issamricin/rf-power-analyzer/blob/master/CHANGELOG.rst"
-urls."Code of Conduct" = "https://github.com/Issamricin/rf-power-analyzer/blob/master/CONTRIBUTING.md"
+urls."Bug Tracker" = "https://github.com/alanmehio/rf-analysis-engine/issues"
+urls."CI: Github Actions" = "https://github.com/alanmehio/rf-analysis-engine/actions"
+urls.Documentation = "https://rf-analysis-engine.readthedocs.io/"
+urls."Source Code" = "https://github.com/alanmehio/rf-analysis-engine"
+urls.Changelog = "https://github.com/alanmehio/rf-analysis-engine/blob/master/CHANGELOG.rst"
+urls."Code of Conduct" = "https://github.com/alanmehio/rf-analysis-engine/blob/main/CONTRIBUTING.MD"
 
 
 
 
 ### Dependency Constraints, aka Requirements ###
 dependencies = [
-  "pyside6>=6.9.0",
   "flask",
-  "scipy",
-  "matplotlib"
 ]
 
 ## optional dependency for test or other purpose 
@@ -82,7 +79,6 @@ test = [
 [tool.poetry]
 packages = [
     { include = "rfserver", from = "src" },
-    { include = "rfclient", from = "src" },
 ]
 
 include = [
@@ -131,7 +127,6 @@ sphinxcontrib-mermaid = { version = "^1.0.0", optional = true, python = ">=3.7,<
 # we will have the rfnode, rfcentral and rfsink  script installed which will execute the main function in the console module in the dmcview package.
 [project.scripts]
 rfserver = 'rfserver.main:main'
-rfclient = 'rfclient.main:main'
 
 [tool.poetry.extras] #see https://realpython.com/dependency-management-python-poetry/
  docs = ["sphinx", "sphinx-rtd-theme", "sphinx-notfound-page", "sphinxcontrib-spelling"]
