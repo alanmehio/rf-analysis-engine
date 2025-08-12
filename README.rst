@@ -1,10 +1,8 @@
-RF Power Analyzer Version 1
-===========================
+RF Analysis Engine
+==================
 
-| Radio Frequency Surveillance Analyzer. Alan ????
-
-
-------
+COMMUNITY VERSION
+-----------------
 
 .. start-badges see https://shields.io/badges and collection see https://github.com/inttter/md-badges
 
@@ -14,27 +12,17 @@ RF Power Analyzer Version 1
 
 
 
-RF-Server
-=========
-REST API server using flask. Alan: explain more
-version 2 AI ML fingerprint ????
+| This application is a server which respondes to the queries of **RF Metadata Displayer**
 
 
-RF Client
-=========
-This application is a GUI application (Desktop) which query the RF central(sever) to extract the
-already calculated meta data with different search criteria; the search result reveals signal meta data
-such as modulation, distance, direction, noise level, phase shift, etc..
-|rf_sink2|
-|rf_sink3|
 
 Change Log
 ==========
- `Change Log <https://github.com/alanmehio/rf-surveillance/blob/main/CHANGELOG.rst>`_.
+ `Change Log <https://github.com/alanmehio/rf-analysis-engine/blob/main/CHANGELOG.rst>`_.
 
 Quickstart
 ==========
-| `Usage <https://github.com/alanmehio/rf-surveillance/blob/main/docs/source/contents/usage.rst>`_.
+| `Usage <https://github.com/alanmehio/rf-analysis-engine/blob/main/docs/source/contents/usage.rst>`_.
 
 
 License
@@ -53,7 +41,7 @@ License
 
 .. LINKS
 
-.. _GNU Affero General Public License v3.0: https://github.com/alanmehio/rf-surveillance/blob/main/LICENSE
+.. _GNU Affero General Public License v3.0: https://github.com/alanmehio/rf-analysis-engine/blob/main/LICENSE
 
 
 
@@ -62,41 +50,40 @@ License
 .. Build Status
 .. Github Actions: Test Workflow Status for specific branch <branch>
 
-.. |build| image:: https://img.shields.io/github/workflow/status/alanmehio/rf-surveillance/Test%20Python%20Package/main?label=build&logo=github-actions&logoColor=%233392FF
+.. |build| image:: https://img.shields.io/github/workflow/status/alanmehio/rf-analysis-engine/Test%20Python%20Package/main?label=build&logo=github-actions&logoColor=%233392FF
     :alt: GitHub Workflow Status (branch)
-    :target: https://github.com/alanmehio/rf-surveillance/actions/workflows/test.yaml?query=branch%3Amain
+    :target: https://github.com/alanmehio/rf-analysis-engine/actions/workflows/test.yaml?query=branch%3Amain
 
 
 .. Documentation
 
-.. |docs| image:: https://img.shields.io/readthedocs/rf-surveillance/latest?logo=readthedocs&logoColor=lightblue
+.. |docs| image:: https://img.shields.io/readthedocs/rf-analysis-engine/latest?logo=readthedocs&logoColor=lightblue
     :alt: Read the Docs (version)
-    :target: https://rf-surveillance.readthedocs.io/en/latest/
+    :target: https://rf-analysis-engine.readthedocs.io/en/latest/
 
 .. |pylint| image:: https://img.shields.io/badge/linting-pylint-yellowgreen
     :target: https://github.com/pylint-dev/pylint
 
 .. PyPI
 
-.. |release_version| image:: https://img.shields.io/pypi/v/rf-surveillance
+.. |release_version| image:: https://img.shields.io/pypi/v/rf-analysis-engine
     :alt: Production Version
-    :target: https://pypi.org/project/rf-surveillance/
+    :target: https://pypi.org/project/rf-analysis-engine/
 
-.. |wheel| image:: https://img.shields.io/pypi/wheel/rf-surveillance?color=green&label=wheel
+.. |wheel| image:: https://img.shields.io/pypi/wheel/rf-analysis-engine?color=green&label=wheel
     :alt: PyPI - Wheel
-    :target: https://pypi.org/project/rf-surveillance
+    :target: https://pypi.org/project/rf-analysis-engine
 
-.. |supported_versions| image:: https://img.shields.io/pypi/pyversions/rf-surveillance?color=blue&label=python&logo=python&logoColor=%23ccccff
+.. |supported_versions| image:: https://img.shields.io/pypi/pyversions/rf-analysis-engine?color=blue&label=python&logo=python&logoColor=%23ccccff
     :alt: Supported Python versions
-    :target: https://pypi.org/project/rf-surveillance
-
+    :target: https://pypi.org/project/rf-analysis-engine
 .. Github Releases & Tags
 
-.. |commits_since_specific_tag_on_main| image:: https://img.shields.io/github/commits-since/alanmehio/rf-surveillance/v0.0.1/main?color=blue&logo=github
+.. |commits_since_specific_tag_on_main| image:: https://img.shields.io/github/commits-since/alanmehio/rf-analysis-engine/v0.0.1/main?color=blue&logo=github
     :alt: GitHub commits since tagged version (branch)
-    :target: https://github.com/alanmehio/rf-surveillance/compare/v0.0.1..main
+    :target: https://github.com/alanmehio/rf-analysis-engine/compare/v0.0.1..main
 
-.. |commits_since_latest_github_release| image:: https://img.shields.io/github/commits-since/alanmehio/rf-surveillance/latest?color=blue&logo=semver&sort=semver
+.. |commits_since_latest_github_release| image:: https://img.shields.io/github/commits-since/alanmehio/rf-analysis-engine/latest?color=blue&logo=semver&sort=semver
     :alt: GitHub commits since latest release (by SemVer)
 
 .. LICENSE (eg AGPL, MIT)
@@ -104,7 +91,7 @@ License
 
 .. |gh-lic| image:: https://img.shields.io/badge/license-GNU_Affero-orange
     :alt: GitHub
-    :target: https://github.com/alanmehio/rf-surveillance/blob/main/LICENSE
+    :target: https://github.com/alanmehio/rf-analysis-engine/blob/main/LICENSE
 
 
 .. Ruff linter for Fast Python Linting
@@ -115,14 +102,3 @@ License
 
 
 .. Local linux command: CTRL+Shift+Alt+R key
-
-
-.. Local Image as link
-
-.. |rf_sink2| image:: https://github.com/alanmehio/rf-surveillance/blob/main/media/rf-sink2.jpeg
-                :alt: RF Surveillance Sink(Client)
-
-.. |rf_sink3| image:: https://github.com/alanmehio/rf-surveillance/blob/main/media/rf-sink3.jpeg
-                :alt: RF Surveillance Sink(Client)
-
-
