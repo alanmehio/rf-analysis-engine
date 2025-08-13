@@ -8,10 +8,9 @@ if __name__ == "__main__":
 
 '''
 Steps:
-$ pwd
-/home/alan/workspace-python/RTL-SDR/rf-power-analyzer
-$ python -m venv .venv
-$ source ./venv/bin/activate
-$ pip install -e .
-$ rfserver
+>>> pwd
+>>> python -m venv .venv
+>>> source ./venv/bin/activate
+>>> pip install -e .
+>>> rfserver
 '''

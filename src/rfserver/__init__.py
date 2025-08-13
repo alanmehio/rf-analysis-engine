@@ -1,8 +1,6 @@
 """
 
-| **RF Central**, a *Python Package* receive high power RF data from different nodes
-
-|
+**RF Analysis Engine**
 
 """
 
