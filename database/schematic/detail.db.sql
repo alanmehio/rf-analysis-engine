@@ -3,7 +3,7 @@ CREATE TABLE IF NOT EXISTS "Frequency" (
 	"id"	INTEGER,
 	"frequency"	REAL NOT NULL,
 	"power"	REAL NOT NULL,
-	"datetime "	TEXT,
+	"datetime"	TEXT,
 	PRIMARY KEY("id" AUTOINCREMENT)
 );
 CREATE TABLE IF NOT EXISTS "FrequencySamples" (

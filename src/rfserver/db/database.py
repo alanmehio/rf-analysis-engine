@@ -11,6 +11,7 @@ https://docs.python.org/3/library/sqlite3.html
 import sqlite3
 import os.path
 from pathlib import Path
+from rfserver.db.create_database import create_db
 
 s = os.path.dirname(__file__)
 p = Path(s).parent.parent.parent.joinpath("database")
@@ -39,8 +40,10 @@ class RowDataBaseManager():
 
 
 class DetailDataBaseManager():
-    db_detail_path = str(p) + os.path.sep + "detail.db" # detail database
-
+    db_detail_path = str(s) + os.path.sep + "detail.db" # detail database
+    if not os.path.exists(db_detail_path):
+        create_db()
+        
     def __init__(self)->None:
         pass
 
