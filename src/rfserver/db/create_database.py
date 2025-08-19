@@ -1,3 +1,13 @@
+"""
+Database creator.
+
+This script creates the database on the user's local machine at its (script's) location. 
+It checks if the database exists before creating a new one.
+
+Also, populates the database with dummy data that were captured from a real device.
+"""
+
+
 import os
 import sqlite3
 
@@ -6,6 +16,10 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 database_path = os.path.join(script_dir, "detail.db")
 
 def create_db():
+    """
+    Creates the database (sqlite3) on the user's local machine.
+    After creating the database with the tables, it calls the populate_db() function.
+    """
     # Create the database if it doesn't exist
     if not os.path.exists(database_path):
         conn = sqlite3.connect(database_path)
@@ -46,10 +60,14 @@ def create_db():
         conn.commit()
         conn.close()
         print(f"\nCreated database: {database_path}")
-        populate_database()
+        populate_db()
 
 
-def populate_database():
+def populate_db():
+    """
+    Populates the database that wase created by the create_db() function with dummy data.
+    Dummy data were captured by a real device so the database can simulate real cases.
+    """
     conn = sqlite3.connect(database_path)
     cur = conn.cursor()
     
