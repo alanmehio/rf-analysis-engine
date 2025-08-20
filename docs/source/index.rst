@@ -28,6 +28,7 @@ The dummy data is taked from a real sensory device.
 
    contents/development 
    contents/changelog
+   contents/codeofconduct
 
 .. toctree::
    :maxdepth: 2
