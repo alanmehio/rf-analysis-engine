@@ -49,7 +49,7 @@ class DetailDataBaseManager():
     @classmethod
     def search_power_frequency(cls,min_power:float, max_power:float, min_frequency:float, max_frequency:float)->list[tuple[int, float, float, str]]:
         """
-        Fetch data readings within a power and frequency range.
+        Fetch data readings from the database within a power and frequency range.
 
         Args:
             min_power (float): The minimum power in the range.
