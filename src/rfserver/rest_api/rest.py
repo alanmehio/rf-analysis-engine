@@ -16,7 +16,7 @@ def search(min_power, max_power, min_frequency, max_frequency) ->list[tuple[int,
     """Search API endpoint.
 
     Search the database within a specific range.
-    It creates a api route that uses the search_power_frequency() method from the DetailDataBaseManager class.
+    It creates an api route that uses the search_power_frequency() method from the DetailDataBaseManager class.
     This route can then be used by the user to provide the variables and get the result.
 
     Args:
