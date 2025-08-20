@@ -12,7 +12,7 @@ from rfserver.db.database import DetailDataBaseManager
 app = Flask(__name__)
 
 @app.route('/search/<float:min_power>/<float:max_power>/<float:min_frequency>/<float:max_frequency>',methods=['GET'])
-def search(min_power, max_power, min_frequency, max_frequency):
+def search(min_power, max_power, min_frequency, max_frequency) ->list[tuple[int,float,float,str]]:
     """Search API endpoint.
 
     Search the database within a specific range.

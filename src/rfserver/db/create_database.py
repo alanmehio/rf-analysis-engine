@@ -15,7 +15,7 @@ import sqlite3
 script_dir = os.path.dirname(os.path.abspath(__file__))
 database_path = os.path.join(script_dir, "detail.db")
 
-def create_db():
+def create_db() -> None:
     """
     Creates the database (sqlite3) on the user's local machine.
     After creating the database with the tables, it calls the populate_db() function.
@@ -63,7 +63,7 @@ def create_db():
         populate_db()
 
 
-def populate_db():
+def populate_db() -> None:
     """
     Populates the database that wase created by the create_db() function with dummy data.
     Dummy data were captured by a real device so the database can simulate real cases.
