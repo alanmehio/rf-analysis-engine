@@ -1,8 +1,9 @@
 RF Analysis Engine
 ==================
 
+=================
 COMMUNITY VERSION
------------------
+=================
 
 .. start-badges see https://shields.io/badges and collection see https://github.com/inttter/md-badges
 
@@ -15,28 +16,22 @@ COMMUNITY VERSION
 | This application is a server which respondes to the queries of **RF Metadata Displayer**
 
 
-
+==========
 Change Log
 ==========
- `Change Log <https://github.com/alanmehio/rf-analysis-engine/blob/main/CHANGELOG.rst>`_.
+| `Change Log <https://github.com/alanmehio/rf-analysis-engine/blob/main/CHANGELOG.rst>`_.
 
+==========
 Quickstart
 ==========
 | `Usage <https://github.com/alanmehio/rf-analysis-engine/blob/main/docs/source/contents/usage.rst>`_.
 
-
+=======
 License
 =======
 
 
-* `GNU Affero General Public License v3.0`_
-
-
-License
-=======
-
-* Free software: GNU Affero General Public License v3.0
-
+| `GNU Affero General Public License v3.0`_
 
 
 .. LINKS

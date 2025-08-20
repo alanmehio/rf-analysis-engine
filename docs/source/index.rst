@@ -21,3 +21,16 @@ The dummy data is taked from a real sensory device.
    :caption: API:
 
    api/rfserver
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Development guide:
+
+   contents/development 
+   contents/changelog
+
+.. toctree::
+   :maxdepth: 2
+   :caption: About:
+
+   contents/about
