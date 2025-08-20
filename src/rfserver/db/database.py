@@ -1,12 +1,9 @@
-'''
-$ sqlitebrowser
-to run the client
-see https://sqlitebrowser.org/dl/
+"""
+Database connector with searching capabilties.
 
-sqllite:
-https://docs.python.org/3/library/sqlite3.html
-
-'''
+This module contains a class that tries to connect to the database, if the database was missing it will call the create_db() function to create one.
+It also provides a method to search inside the database for a specific range of the data.
+"""
 
 import sqlite3
 import os.path
@@ -16,39 +13,62 @@ from rfserver.db.create_database import create_db
 s = os.path.dirname(__file__)
 p = Path(s).parent.parent.parent.joinpath("database")
 
-class RowDataBaseManager():
-    db_raw_path = str(p) + os.path.sep + "raw.db" # raw database
+#class RowDataBaseManager():
+#    db_raw_path = str(p) + os.path.sep + "raw.db" # raw database
+#
+#    def __init__(self)->None:
+#        pass
+#
+#    @classmethod
+#    def insert_high_power_frequency(cls,data:str)->None:
+#        con = sqlite3.connect(cls.db_raw_path)
+#        cur = con.cursor()
+#        cur.execute("INSERT INTO HighPowerFrequency VALUES(NULL,?)", (data,))
+#        con.commit()
+#        con.close() # not effecient
+#
+#    @classmethod
+#    def insert_high_power_sample(cls,data:str)->None:
+#        con = sqlite3.connect(cls.db_raw_path)
+#        cur = con.cursor()
+#        cur.execute("INSERT INTO HighPowerSample VALUES(NULL,?)", (data,))
+#        con.commit()
+#        con.close() # not effecient
 
-    def __init__(self)->None:
-        pass
-
-    @classmethod
-    def insert_high_power_frequency(cls,data:str)->None:
-        con = sqlite3.connect(cls.db_raw_path)
-        cur = con.cursor()
-        cur.execute("INSERT INTO HighPowerFrequency VALUES(NULL,?)", (data,))
-        con.commit()
-        con.close() # not effecient
-
-    @classmethod
-    def insert_high_power_sample(cls,data:str)->None:
-        con = sqlite3.connect(cls.db_raw_path)
-        cur = con.cursor()
-        cur.execute("INSERT INTO HighPowerSample VALUES(NULL,?)", (data,))
-        con.commit()
-        con.close() # not effecient
 
 
 class DetailDataBaseManager():
+    """
+    Connect to the database.
+    Call the create_db() to create one if database not found.
+    """
     db_detail_path = str(s) + os.path.sep + "detail.db" # detail database
     if not os.path.exists(db_detail_path):
         create_db()
-        
-    def __init__(self)->None:
-        pass
 
     @classmethod
-    def search_power_frequency(cls,min_power:float, max_power:float, min_frequency:float, max_frequency:float)->None:
+    def search_power_frequency(cls,min_power:float, max_power:float, min_frequency:float, max_frequency:float)->list[tuple[int, float, float, str]]:
+        """
+        Fetch data readings from the database within a power and frequency range.
+
+        Args:
+            min_power (float): The minimum power in the range.
+            max_power (float): The maximum power in the range.
+            min_frequency (float): The minimum frequency in the range.
+            max_frequency (float): The maximum frequency in the range.
+
+        Returns:
+            list: A list of tuples, were each tuple contains:
+                - int: Record ID.
+                - float: Power value.
+                - float: Frequency value.
+                - str: Timestamp of the reading.
+                       
+        Example:
+            >>> from database import DetialDataBaseManager
+            >>> DetialDataBaseManager.search_power_frequency(20.12, 20.54, 103.7, 105.1)
+            >>> [(90, 103.7, 20.54, '06-06-2025 12:16:18'), (91, 104.3, 20.18, '06-06-2025 12:16:18')]
+        """
         con = sqlite3.connect(cls.db_detail_path)
         cur = con.cursor()
         cur.execute("select * from Frequency where frequency BETWEEN :min_f AND :max_f AND power BETWEEN :min_p AND :max_p;", 
@@ -59,74 +79,3 @@ class DetailDataBaseManager():
 
         return result
     
-    #@classmethod
-    #def insert_frequency_samples(cls,frequency:float, power:float, date_time:str, samples:list[complex])->None:
-    #    # power, frequency and samples for the center frequency v2
-    #    con = sqlite3.connect(cls.db_detail_path)
-    #    cur = con.cursor()
-    #    cur.execute("INSERT INTO Frequency VALUES(NULL,?,?,?)", (frequency,power, date_time))
-    #    primary_key = cur.lastrowid
-    #    if(primary_key):
-    #        data = cls.__convert__(primary_key=primary_key,samples=samples)
-    #        cur.executemany("INSERT INTO FrequencySamples VALUES(NULL,?,?,?)",data)
-    #        con.commit()
-    #    else:
-    #        con.rollback() # FIXME add log warning
-#
-    #    con.close()
-#
-    #@classmethod
-    #def insert_frequency_power(cls,frequency:float, power:float, date_time:str)->None:
-    #    # power, frequency v1
-    #    con = sqlite3.connect(cls.db_detail_path)
-    #    cur = con.cursor()
-    #    cur.execute("INSERT INTO Frequency VALUES(NULL,?,?,?)", (frequency,power, date_time))
-    #    con.commit()
-    #    con.close()
-#
-    #@classmethod
-    #def __convert__(cls, primary_key:int, samples:list[complex])->list[tuple[int,float,float]]:
-    #    lst = []
-    #    for x in samples:
-    #       var = (primary_key,x.real,x.imag)
-    #       lst.append(var)
-#
-    #    return lst
-#
-    #@classmethod
-    #def insert_power_frequencies(cls, power: float, date_time:str, frequencies: list[float]):
-    #    con = sqlite3.Connection(cls.db_detail_path)
-    #    cur = con.cursor()
-    #    cur.execute("INSERT INTO Power VALUES(NULL,?,?)",(power,date_time))
-    #    primary_key = cur.lastrowid
-    #    lst = []
-    #    for x in frequencies:
-    #        var = (primary_key,x)
-    #        lst.append(var)
-#
-    #    cur.executemany("INSERT INTO PowerFrequencies VALUES(NULL,?,?)",lst)
-    #    con.commit()
-    #    con.close()
-#
-
-
-
-
-
-#if __name__ == '__main__':
-#    #RowDataBaseManager.insert_high_power_frequency("High power frequency")
-#    #RowDataBaseManager.insert_high_power_sample("High power sample")
-#    power:float = 50.55
-#    frequency = 105.55
-#    lst = []
-#    c:complex = complex(2.0,1.333)
-#    lst.append(c)
-#    date_time="25-05-04 13:33:10"
-#    #v2 DetailDataBaseManager.insert_frequency_samples(frequency=frequency,power=power,date_time=date_time,samples=lst)
-#    DetailDataBaseManager.insert_frequency_power(frequency=frequency, power=power, date_time=date_time)
-#    #v2 frequencies = [105.55,106.44,107.68,108.68]
-#    # v2 DetailDataBaseManager.insert_power_frequencies(power,date_time,frequencies)s
-#
-#
-#
-#

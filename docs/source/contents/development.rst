@@ -1,9 +1,11 @@
+Development
+-----------
 
 | Insall `pip` 
  
 .. code-block:: shell
 
-    python3 -m pip install rf-analysis-engine
+    python3 -m pip install 
 
 
 | Clone the repository 
@@ -11,7 +13,7 @@
 .. code-block:: shell
 
     git clone git@github.com:alanmehio/rf-analysis-engine.git
-    cd  rf-analysis.engine
+    cd  rf-analysis-engine
 
 | Make the project in edit mode  
 
@@ -23,12 +25,12 @@ Then, for any changes in the code you can execute it from command line
 
 .. code-block:: shell
 
-   rfnode  setting.json -vvv -ld /home/alan/tmp
+   rfserver  setting.json -vvv -ld /home/alan/tmp
     
 
-
+-----------------
 Development Notes
-~~~~~~~~~~~~~~~~~
+-----------------
 Testing, Documentation Building, Scripts, CI/CD, Static Code Analysis for this project.
 
 1. **Test Suite**, using `pytest`_, located in `tests` dir
@@ -60,12 +62,13 @@ Testing, Documentation Building, Scripts, CI/CD, Static Code Analysis for this p
    d. **Type Check Command**, using `mypy`_
    e. **Lint** *Check* and `Apply` commands, using the fast `Ruff`_ linter, along with `isort`_ and `black`_
 
-
+-------------
 Prerequisites
 -------------
 
-You need to have `Python` and  `Flask`  installed for Development
+You need to have `Python` and  `flask`  installed for Development
 
+-----------------
 API Documentation
 -----------------
 We follow Google style documentation for packages, modules, classes, methods 
