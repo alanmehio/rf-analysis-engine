@@ -1,4 +1,5 @@
 import pytest
+
 from rfserver.db.database import DetailDataBaseManager
 
 

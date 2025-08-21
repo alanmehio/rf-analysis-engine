@@ -5,9 +5,10 @@ This module contains a class that tries to connect to the database, if the datab
 It also provides a method to search inside the database for a specific range of the data.
 """
 
-import sqlite3
 import os.path
+import sqlite3
 from pathlib import Path
+
 from rfserver.db.create_database import create_db
 
 s = os.path.dirname(__file__)

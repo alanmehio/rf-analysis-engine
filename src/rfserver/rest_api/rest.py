@@ -6,6 +6,7 @@ This api lets the user search in the database within the range they insert.
 """
 
 from flask import Flask, jsonify, request
+
 from rfserver.db.database import DetailDataBaseManager
 
 # create a Flask app

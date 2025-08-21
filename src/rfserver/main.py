@@ -1,5 +1,6 @@
 from rfserver.rest_api import rest
 
+
 def main() -> None:
     rest.app.run()
 
