@@ -1,4 +1,5 @@
-import pytest
+
+
 from rfserver.db.database import DetailDataBaseManager
 
 
@@ -9,5 +10,6 @@ def test_search_power_frequency():
     max_frequency = 109
     result = DetailDataBaseManager.search_power_frequency(min_power, max_power, min_frequency, max_frequency)
 
-    assert result != None
-    assert type(result) == type([])
+    assert result is not None
+    assert type(result) is type([])
+

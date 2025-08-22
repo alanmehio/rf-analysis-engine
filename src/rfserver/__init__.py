@@ -17,6 +17,3 @@ __all__ = (
     "__version__",
     "main",
 )
-
-# bootstrap it
-from .rest_api import rest

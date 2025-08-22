@@ -70,7 +70,6 @@ def populate_db() -> None:
     """
     conn = sqlite3.connect(database_path)
     cur = conn.cursor()
-    
     data = [(105.55, 25.55,	"06-06-2025 12:13:36"),
     (105.55, 25.55,	"06-06-2025 12:13:37"),
     (105.55, 25.55,	"06-06-2025 12:13:38"),
