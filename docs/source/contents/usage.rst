@@ -38,10 +38,11 @@ Then start the rfserver to allow the client to query the database.
    :width: 900px
    :align: center
 
-Now you can run the rfmetadata and query the data.
+Now you can install and run the rfmetadata and query the data.
 
 .. code-block:: shell
-
+  
+  python3 -m pip install rfmetadata
   rfmetadata
 
 .. image:: ../_static/rfmetadata.png
