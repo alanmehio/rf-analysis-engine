@@ -1,9 +1,13 @@
 RF Analysis Engine
 ==================
 
+All data collected from the **RF Surveillance Central(rfcentral)**  is being mined by different  AI ML ( machine learning) models to extract useful data for the 
+radio frequency. 
+
 =================
 COMMUNITY VERSION
 =================
+
 
 .. start-badges see https://shields.io/badges and collection see https://github.com/inttter/md-badges
 
@@ -45,9 +49,9 @@ License
 .. Build Status
 .. Github Actions: Test Workflow Status for specific branch <branch>
 
-.. |build| image:: https://img.shields.io/github/workflow/status/alanmehio/rf-analysis-engine/Test%20Python%20Package/main?label=build&logo=github-actions&logoColor=%233392FF
+.. |build| image:: https://img.shields.io/github/workflow/status/alanmehio/rf-analysis-engine/actions/workflows/ci_cd.yaml/badge.svg
     :alt: GitHub Workflow Status (branch)
-    :target: https://github.com/alanmehio/rf-analysis-engine/actions/workflows/test.yaml?query=branch%3Amain
+    :target: https://github.com/alanmehio/rf-analysis-engine/actions
 
 
 .. Documentation
@@ -61,17 +65,17 @@ License
 
 .. PyPI
 
-.. |release_version| image:: https://img.shields.io/pypi/v/rf-analysis-engine
+.. |release_version| image:: https://img.shields.io/pypi/v/rfserver
     :alt: Production Version
-    :target: https://pypi.org/project/rf-analysis-engine/
+    :target: https://pypi.org/project/rfserver/
 
-.. |wheel| image:: https://img.shields.io/pypi/wheel/rf-analysis-engine?color=green&label=wheel
+.. |wheel| image:: https://img.shields.io/pypi/wheel/rfserver?color=green&label=wheel
     :alt: PyPI - Wheel
-    :target: https://pypi.org/project/rf-analysis-engine
+    :target: https://pypi.org/project/rfserver
 
-.. |supported_versions| image:: https://img.shields.io/pypi/pyversions/rf-analysis-engine?color=blue&label=python&logo=python&logoColor=%23ccccff
+.. |supported_versions| image:: https://img.shields.io/pypi/pyversions/rfserver?color=blue&label=python&logo=python&logoColor=%23ccccff
     :alt: Supported Python versions
-    :target: https://pypi.org/project/rf-analysis-engine
+    :target: https://pypi.org/project/rfserver
 .. Github Releases & Tags
 
 .. |commits_since_specific_tag_on_main| image:: https://img.shields.io/github/commits-since/alanmehio/rf-analysis-engine/release-1.0.0/main?color=blue&logo=github
